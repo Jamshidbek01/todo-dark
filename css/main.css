@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Josefin Sans";
+}
+
+:root {
+  --white: #FFFFFF;
+  --gray: #D1D2DA;
+  --grey: #9495A5;
+  --color: #5B5E7E;
+  --pale-dark: #494C6B;
+  --dark: #393A4B;
+  --circle: #E3E4F1;
+  --blue: #3A7CFD;
+  --text-color: #C8CBE7;
+  --full-blue: #25273D;
+  --body-color: #ffffff;
+}
+
+.dark {
+  --white: #25273D;
+  --gray: #D1D2DA;
+  --grey: #767992;
+  --color: #5B5E7E;
+  --pale-dark: #ffffff;
+  --dark: #393A4B;
+  --circle: #E3E4F1;
+  --blue: #3A7CFD;
+  --text-color: #C8CBE7;
+  --full-blue: #25273D;
+  --body-color: #171823;
+}
+
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/josefin-sans-v25-latin-regular.woff2") format("woff2"), url("../fonts/josefin-sans-v25-latin-regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/josefin-sans-v25-latin-700.woff2") format("woff2"), url("../fonts/josefin-sans-v25-latin-700.woff") format("woff");
+}
+.container {
+  width: 100%;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+li {
+  list-style: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: var(--body-color);
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+form {
+  background-image: url(../image/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+form .lg {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background: -o-linear-gradient(225deg, rgba(85, 150, 255, 0.603) 0%, rgba(172, 45, 235, 0.603) 100%);
+  background: linear-gradient(225deg, rgba(85, 150, 255, 0.603) 0%, rgba(172, 45, 235, 0.603) 100%);
+}
+form .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 48px;
+}
+form .header .title {
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 15px;
+  color: #ffffff;
+}
+form .header .mode {
+  cursor: pointer;
+}
+form .form {
+  position: relative;
+}
+form .form input {
+  outline: none;
+  background: var(--white);
+  -webkit-box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  height: 64px;
+  width: 100%;
+  padding: 20px 24px 20px 65px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--grey);
+  border: none;
+}
+form .form .circle {
+  position: absolute;
+  margin: 18px 24px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--circle);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+form .form .circle img {
+  display: none;
+}
+form .form .circle.checked {
+  background: -o-linear-gradient(315deg, #55DDFF 0%, #C058F3 100%);
+  background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+}
+form .form .circle.checked img {
+  display: block;
+}
+
+.todo {
+  margin-top: -50px;
+  background-color: var(--white);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+}
+.todo .todo-list li {
+  padding: 20px 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid var(--circle);
+}
+.todo .todo-list li p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+  color: var(--pale-dark);
+}
+.todo .todo-list li .close {
+  margin-left: auto;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  display: none;
+}
+.todo .todo-list li:hover .close {
+  display: block;
+}
+.todo .todo-list li .complete {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid;
+  border-color: var(--circle);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.todo .todo-list li .complete img {
+  display: none;
+}
+.todo .todo-list li .complete:hover {
+  border-color: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+}
+.todo .todo-list li.checked p {
+  text-decoration: line-through;
+  color: var(--gray);
+}
+.todo .todo-list li.checked .complete {
+  background: -o-linear-gradient(315deg, #55DDFF 0%, #C058F3 100%);
+  background: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+  border: none;
+}
+.todo .todo-list li.checked .complete img {
+  display: block;
+}
+.todo .todo-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 24px 16px 24px 20px;
+}
+.todo .todo-info .sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 19px;
+}
+
+.validation {
+  height: 20px;
+  padding: 10px;
+  font-size: 25px;
+  color: red;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 52px;
+  padding-bottom: 52px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: var(--grey);
+}

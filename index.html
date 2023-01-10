@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Todos</title>
+</head>
+
+<body>
+    <main>
+        <form>
+            <div class="lg">
+                <div class="container">
+                    <div class="header">
+                        <div class="title">TODO</div>
+                        <img src="image/moon.svg" class="mode">
+                    </div>
+                    <div class="form">
+                        <span class="circle">
+                            <img src="image/tick.svg">
+                        </span>
+                        <input type="text" class="input" placeholder="Create a new todo…" autocomplete="off">
+                        <!-- <button type="submit" class="btn">Add</button> -->
+                    </div>
+                    <p class="validation"></p>
+                </div>
+            </div>
+        </form>
+        <div class="container">
+            <div class="todo">
+                <ul class="todo-list"></ul>
+                <div class="todo-info">
+                    <div class="item-num">0 items left</div>
+                    <div class="sort">
+                        <span>All</span>
+                        <span>Active</span>
+                        <span>Completed</span>
+                    </div>
+                    <div class="clear">Clear Completed</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">Drag and drop to reorder list</footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
