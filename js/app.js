@@ -23,8 +23,6 @@ circle.addEventListener('click', function (e) {
         document.querySelector('p').innerHTML = ''
         add(input)
         circle.classList.add('checked')
-        linum++
-        console.log(linum);
         setTimeout(() => {
             circle.classList.remove('checked')
         }, 1000);
